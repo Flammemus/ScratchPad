@@ -7,6 +7,10 @@ wn.bgcolor("white")
 wn.title("Turtle Race")
 wn.screensize(500, 500)
 
+wn.listen()
+
+
+
 winline = 235
 
 backstage = turtle.Turtle()
@@ -113,7 +117,17 @@ tidemann.pendown()
 sigurd.pendown()
 
 racetofinish = True
-while racetofinish:
+
+
+def up():
+    global quit
+    quit = True
+
+quit = False
+
+wn.onkey(up, "q")
+
+while racetofinish and not quit:
 
     amund.forward(randint(1, 10))
     carlAnton.forward(randint(1, 10))
