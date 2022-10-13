@@ -5,6 +5,7 @@ print("Here you will enter a number from 1 to 50, and with hints, you need to gu
 print("----------------------")
 pcnumber = random.randint(1, 50)
 guesses = 0
+
 t = True
 while t:
     numberguess = int(input("Guess a number (1 - 50): "))
